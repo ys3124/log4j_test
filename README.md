@@ -31,6 +31,15 @@ curl -X POST -H 'Content-Type: text/plain' -d '${java:runtime}' http://localhost
 ext['log4j2.version'] = '2.15.0'
 ```
 
+## 対策後の動作
+```
+## バージョンアップ前
+2021-12-14 10:01:33.151 INFO [http-nio-8080-exec-1] com.example.api.ApiApplication: OpenJDK Runtime Environment (build 15.0.2+7-27) from Oracle Corporation
+
+## バージョンアップ後
+2021-12-14 10:04:15.575 INFO [http-nio-8080-exec-1] com.example.api.ApiApplication: ${java:runtime}
+```
+
 ## 参考
 - spring boot 環境を docker で構築する
 https://ienokado-blog.com/2021/05/14/docker-spring-install/
